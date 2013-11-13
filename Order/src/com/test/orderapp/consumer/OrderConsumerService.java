@@ -1,4 +1,4 @@
-package com.test.orderapp.listener;
+package com.test.orderapp.consumer;
 
 import java.util.Map;
 
@@ -14,13 +14,7 @@ public class OrderConsumerService {
 	 */
 	private static final Logger logger = Logger.getLogger(OrderConsumerService.class);
 
-//	public void orderReceived(Map<String, Object> message) throws Exception {
-//	    Order customer = new Order(message);
-//		if (logger.isInfoEnabled()) {
-//			logger.info("orderReceived(Map<String,Object>) - Order customer=" + customer); //$NON-NLS-1$
-//		}
-//	  }
-	public void received(Map<String, Object> message) throws Exception {
+	public void receive(Map<String, Object> message) throws Exception {
 	    Order customer = new Order(message);
 		if (logger.isInfoEnabled()) {
 			logger.info("orderReceived(Map<String,Object>) - Order customer=" + customer); //$NON-NLS-1$

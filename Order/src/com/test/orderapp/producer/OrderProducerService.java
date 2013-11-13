@@ -25,7 +25,7 @@ public class OrderProducerService {
 	
 	static int orderSequence = 1;
 	
-	public void sendOrder(int customerId, double price) {
+	public void send(int customerId, double price) {
 		final Order order = new Order(orderSequence, 2, price, "ordercd" + orderSequence++);
 		jmsTemplate.send(new MessageCreator() {
 			public Message createMessage(Session session) throws JMSException {

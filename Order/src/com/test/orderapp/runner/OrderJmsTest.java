@@ -19,7 +19,7 @@ public class OrderJmsTest {
 	
 	@Test public void sendReceive() {
 		for(int i =1; i<=5; i++){
-			orderService.sendOrder(1+i, 10.0D+i);
+			orderService.send(1+i, 10.0D+i);
 		}
 	}
 }
