@@ -9,18 +9,24 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
+import org.springframework.stereotype.Service;
 
 import com.test.orderapp.domain.Order;
 
-public class OrderSender {
+@Service
+public class OrderProducerService {
+
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(OrderSender.class);
+	private static final Logger logger = Logger.getLogger(OrderProducerService.class);
 
 	@Autowired JmsTemplate jmsTemplate;
-
-	public void sendOrder(final Order order) {
+	
+	static int orderSequence = 1;
+	
+	public void sendOrder(int customerId, double price) {
+		final Order order = new Order(orderSequence, 2, price, "ordercd" + orderSequence++);
 		jmsTemplate.send(new MessageCreator() {
 			public Message createMessage(Session session) throws JMSException {
 				MapMessage mapMessage = session.createMapMessage();

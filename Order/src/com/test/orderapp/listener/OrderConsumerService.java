@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 import com.test.orderapp.domain.Order;
 
 @Component
-public class OrderListener {
+public class OrderConsumerService {
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(OrderListener.class);
+	private static final Logger logger = Logger.getLogger(OrderConsumerService.class);
 
 //	public void orderReceived(Map<String, Object> message) throws Exception {
 //	    Order customer = new Order(message);

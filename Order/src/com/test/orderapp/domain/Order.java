@@ -11,6 +11,10 @@ public class Order {
 	private int customerId;
 	private double price;
 	private String orderCode;
+	
+	public Order() {
+		super();
+	}
 
 	public Order(int orderId, int customerId, double price, String orderCode) {
 		this();
@@ -20,9 +24,6 @@ public class Order {
 		this.orderCode = orderCode;
 	}
 
-	public Order() {
-		super();
-	}
 
 	public Order(Map<String, Object> message) {
 		this();

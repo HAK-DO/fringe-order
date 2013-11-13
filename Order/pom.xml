@@ -18,7 +18,7 @@
   </build>
 	<properties>
 		<maven.test.failure.ignore>true</maven.test.failure.ignore>
-		<spring.framework.version>3.0.2.RELEASE</spring.framework.version>
+		<spring.framework.version>3.2.4.RELEASE</spring.framework.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -57,6 +57,11 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.12.2</version>
-		</dependency>		
+		</dependency>	
+        <dependency>
+            <groupId>org.apache.xbean</groupId>
+            <artifactId>xbean-spring</artifactId>
+            <version>3.7</version>
+        </dependency>			
 	</dependencies>
 </project>
