@@ -12,7 +12,7 @@ import com.test.orderapp.producer.OrderService;
  * @author hdlee
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:application-context.xml")
+@ContextConfiguration("classpath:applicationContext.xml")
 public class TestJms {
 
 	@Autowired OrderService orderService;
