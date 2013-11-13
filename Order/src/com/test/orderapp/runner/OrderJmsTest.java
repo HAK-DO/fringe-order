@@ -17,7 +17,7 @@ public class OrderJmsTest {
 
 	@Autowired OrderProducerService orderService;
 	
-	@Test public void sendReceive() {
+	@Test public void send() {
 		for(int i =1; i<=5; i++){
 			orderService.send(1+i, 10.0D+i);
 		}

@@ -37,5 +37,4 @@ public class Order {
 		return "Order [orderId=" + orderId + ", customerId=" + customerId + ", price=" + price + ", orderCode=" + orderCode + "]";
 	}
 	
-
 }

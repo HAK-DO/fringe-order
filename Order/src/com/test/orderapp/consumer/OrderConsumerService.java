@@ -19,6 +19,5 @@ public class OrderConsumerService {
 		if (logger.isInfoEnabled()) {
 			logger.info("orderReceived(Map<String,Object>) - Order customer=" + customer); //$NON-NLS-1$
 		}
-	  }
-	
+	}
 }

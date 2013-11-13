@@ -20,10 +20,9 @@ public class OrderProducerService {
 	 * Logger for this class
 	 */
 	private static final Logger logger = Logger.getLogger(OrderProducerService.class);
+	public static int orderSequence = 1;
 
 	@Autowired JmsTemplate jmsTemplate;
-	
-	static int orderSequence = 1;
 	
 	public void send(int customerId, double price) {
 		final Order order = new Order(orderSequence, 2, price, "ordercd" + orderSequence++);
