@@ -15,11 +15,11 @@ import com.lollykids.biz.producer.OrderProducer;
 @ContextConfiguration("classpath:applicationContext.xml")
 public class ProducerAndConsumerTest {
 
-	@Autowired OrderProducer orderService;
+	@Autowired OrderProducer orderProducer;
 	
 	@Test public void send() {
 		for(int i =1; i<=5; i++){
-			orderService.send(1+i, 10.0D+i);
+			orderProducer.send(1+i, 10.0D+i);
 		}
 	}
 }
