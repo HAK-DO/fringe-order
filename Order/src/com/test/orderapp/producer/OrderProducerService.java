@@ -20,6 +20,7 @@ public class OrderProducerService {
 	 * Logger for this class
 	 */
 	private static final Logger logger = Logger.getLogger(OrderProducerService.class);
+	
 	public static int orderSequence = 1;
 
 	@Autowired JmsTemplate jmsTemplate;
