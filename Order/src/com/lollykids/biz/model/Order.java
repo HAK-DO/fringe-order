@@ -1,4 +1,4 @@
-package com.test.orderapp.domain;
+package com.lollykids.biz.model;
 
 import java.util.Map;
 

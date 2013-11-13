@@ -1,4 +1,4 @@
-package com.test.orderapp.producer;
+package com.lollykids.biz.producer;
 
 import javax.jms.JMSException;
 import javax.jms.MapMessage;
@@ -10,17 +10,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import com.test.orderapp.domain.Order;
+import com.lollykids.biz.model.Order;
 
 @Component
-public class OrderProducerService {
+public class OrderProducer {
 
 	/**
 	 * Logger for this class
 	 */
-	private static final Logger logger = Logger.getLogger(OrderProducerService.class);
+	private static final Logger logger = Logger.getLogger(OrderProducer.class);
 	
 	public static int orderSequence = 1;
 

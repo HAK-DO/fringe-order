@@ -8,7 +8,7 @@
                         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
                         http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd">
 
-	<context:component-scan base-package="com.test.orderapp" />
+	<context:component-scan base-package="com.lollykids.biz" />
 	<context:annotation-config />
 
 	<amq:connectionFactory id="connectionFactory" brokerURL="tcp://localhost:61616" />
@@ -22,6 +22,6 @@
 	
 	<!-- consumers -->
 	<jms:listener-container container-type="default" connection-factory="singleConnectionFactory" acknowledge="auto">
-		<jms:listener destination="orderQueue" ref="orderConsumerService" method="receive" />
+		<jms:listener destination="orderQueue" ref="orderConsumer" method="receive" />
 	</jms:listener-container>
 </beans>
